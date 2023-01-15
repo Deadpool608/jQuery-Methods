@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.6.3.js"></script>
+    <title>Insert Methods</title>
+
+    <script>
+        $(document).ready(function () {
+            $(".btn").click(function () {
+                $("ol").append("<li>This is appended item</li>");
+            });
+            $(".btn2").click(function () {
+                $("ol").prepend("<li>This is prepended item</li>");
+            });
+            $(".btn3").click(function () {
+                $(".insert").before("<h4>Before Box</h4>");
+            });
+            $(".btn4").click(function () {
+                $(".insert").after("<h4>After Box</h4>");
+            });
+            $(".btn5").click(function () {
+                $("ol").remove(".list");
+            });
+        });
+    </script>
+
+    <style>
+        .d1 {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="fade-animate.html">Fade-animate</a>
+        <a href="css.html">CSS</a>
+        <a href="manipulation.html">Manipulation</a>
+        <a href="insert.html" style="text-decoration: underline;
+        font-weight: 600;color: rgb(71, 161, 251);">Insert</a>
+    </nav>
+
+    <div class="insert">
+        <div class="box">
+            <h2>This will Append or Prepend 1 item in list</h2>
+            <ol class="list">
+                <li>This First item</li>
+                <li>This Second item</li>
+                <li>This Third item</li>
+            </ol>
+
+        </div>
+        <div class="btns">
+            <h3>this is append() method</h3>
+            <button class="btn">Append</button><br><br>
+
+            <h3>this is prepend() method</h3>
+            <button class="btn2">Prepend</button><br><br>
+
+
+            <h3>this is Before() method</h3>
+            <button class="btn3">Before</button><br><br>
+
+            <h3>this is After() method</h3>
+            <button class="btn4">After</button><br><br>
+
+            <h3>this is remove() method</h3>
+            <button class="btn5">Remove</button><br><br>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>

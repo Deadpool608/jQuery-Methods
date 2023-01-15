@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="jquery-3.6.3.js"></script>
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    $(document).ready(function () {
+      $("#btn1").click(function () {
+        alert("Text: " + $("#test").text());
+      });
+      $("#btn2").click(function () {
+        alert("HTML: " + $("#test").html());
+      });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $(".btn").click(function () {
+        alert("Value: " + $(".test").val());
+      });
+      $(".btn3").click(function () {
+        $(".test").val("C.B.Patel College");
+      });
+    });
+  </script>
+
+  </script>
+
+
+  <script>
+    $(document).ready(function () {
+      $(".btn1").click(function () {
+        $(".test1").text("Hello <b>world!</b>");
+      });
+      $(".btn2").click(function () {
+        $(".test2").html("Hello <b>world!</b>");
+      });
+    });
+  </script>
+
+
+
+
+
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="fade-animate.html">Fade-animate</a>
+    <a href="css.html">CSS</a>
+    <a href="manipulation.html" style="text-decoration: underline;
+    font-weight: 600;color: rgb(71, 161, 251);">Manipulation</a>
+    <a href="insert.html">Insert</a>
+
+  </nav>
+
+  <div class="show">
+    <div class="box">
+      <p id="test">This is some <b>bold</b> text in a paragraph.</p>
+    </div>
+    <div class="btns">
+      <h3>This is text() method </h3>
+      <button id="btn1">Show Text</button>
+      <h3>This is html() method </h3>
+      <button id="btn2">Show HTML</button>
+    </div>
+  </div>
+
+  <div class="value">
+    <div class="box">
+      <p>Name: <input type="text" class="test" value="CBPCC"></p>
+    </div>
+    <div class="btns">
+      <h3>This is val() method </h3>
+
+      <button class="btn">Show Value</button>
+      <h3>This is val() method </h3>
+
+      <button class="btn3" id="btn3">Set Value</button>
+    </div>
+  </div>
+
+  <div class="set">
+    <div class="box">
+      <p class="test1">This is a paragraph.</p><br>
+      <p class="test2">This is another paragraph.</p>
+    </div>
+    <div class="btns">
+      <h3>This is text() method </h3>
+      <button class="btn1" id="btn1">Set Text</button>
+      <h3>This is html() method </h3>
+      <button class="btn2" id="btn2">Set HTML</button>
+    </div>
+  </div>
+
+</body>
+
+</html>

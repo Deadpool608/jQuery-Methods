@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery-3.6.3.js"></script>
+
+    <!-- fadeIn() method -->
+    <script>
+        $(document).ready(function () {
+            $(".btnin").click(function () {
+                $("#div1").fadeIn();
+                $("#div2").fadeIn("slow");
+                $("#div3").fadeIn(3000);
+                $(".me").fadeIn(3050);
+            });
+        });  
+    </script>
+
+    <!-- fadeOut() method -->
+    <script>
+        $(document).ready(function () {
+            $(".btnout").click(function () {
+                $("#div1").fadeOut();
+                $("#div2").fadeOut("slow");
+                $("#div3").fadeOut(3000);
+                $(".me").fadeOut(3050);
+            });
+        });  
+    </script>
+
+    <!-- fadeToggle() method -->
+    <script>
+        $(document).ready(function () {
+            $(".btntoggle").click(function () {
+                $("#div1").fadeToggle();
+                $("#div2").fadeToggle("slow");
+                $("#div3").fadeToggle(3000);
+                $(".me").fadeToggle(3050);
+
+            });
+        });  
+    </script>
+
+    <!-- fadeTo() method -->
+    <script>
+        $(document).ready(function () {
+            $(".fadeto").click(function () {
+                $("#div1").fadeTo("slow", 0.3);
+                $("#div2").fadeTo("slow", 0.4);
+                $("#div3").fadeTo("slow", 0.5);
+                $(".me").css("font-size", "20px");
+            });
+        });  
+    </script>
+
+    <!-- animate() method  -->
+    <script>
+        $(document).ready(function () {
+            $(".anm1").click(function () {
+                $(".div2").animate({ left: '1328px' });
+            });
+        });  
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".anm2").click(function () {
+                $(".div2").animate({
+                    left: '850px',
+                    opacity: '0.3',
+                    height: '150px',
+                    width: '150px'
+                });
+            });
+        });  
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".anm3").click(function () {
+                $(".div2").animate({
+                    left: '800px',
+                    width: '+=80px'
+
+                });
+            });
+        });  
+    </script>
+    <script>
+
+        $(function () {
+            $(".anm4").click(function () {
+                $("div").each(function (index) {
+                    var colorR = Math.floor((Math.random() * 256));
+                    var colorG = Math.floor((Math.random() * 256));
+                    var colorB = Math.floor((Math.random() * 256));
+                    $(this).css("background-color", "rgb(" + colorR + "," + colorG + "," + colorB + ")");
+                });
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".anm5").click(function () {
+                $("div").animate({
+                    height: 'toggle'
+                });
+            });
+        });  
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".anm-all").click(function () {
+                $(".box2").animate({
+                    width: "300px",
+                    height: "300px",
+                    marginLeft: "150px",
+                    borderWidth: "10px",
+                    opacity: 0.5
+                });
+            });
+        }); 
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(".anm-one").click(function () {
+                $(".box2")
+                    .animate({ width: "300px" })
+                    .animate({ height: "300px" })
+                    .animate({ marginLeft: "150px" })
+                    .animate({ borderWidth: "10px" })
+                    .animate({ opacity: 0.5 });
+            });
+        });
+    </script>
+
+
+
+
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="fade-animate.html" style="text-decoration: underline;
+        font-weight: 600;color: rgb(71, 161, 251);">Fade-animate</a>
+        <a href="css.html">CSS</a>
+        <a href="manipulation.html">Manipulation</a>
+        <a href="insert.html">Insert</a>
+    </nav>
+
+    <div class="fade">
+        <div class="box">
+
+            <div id="div1"
+                style="width:500px;height:80px;border: solid black 1px;display:none;background-color:orange;">
+            </div>
+            <br>
+            <div id="div2"
+                style="width:400px;height:80px;border: solid black 1px;display:none;background-color:whitesmoke;">
+            </div><br>
+            <div id="div3" style="width:300px;height:80px;border: solid black 1px;display:none;background-color:green;">
+            </div>
+            <div class="me" style="display: none;cursor: pointer;"><a href="https://github.com/Deadpool608">github
+                    account</a></div>
+        </div>
+        <div class="btns">
+            <h3>This is fadein() method </h3>
+            <button class="btnin">Click to fade in boxes</button><br><br>
+
+            <h3>This is fadeout() method </h3>
+            <button class="btnout">Click to fade out boxes</button><br><br>
+
+            <h3>This is toggle()  method </h3>
+            <button class="btntoggle">Click to fade In/Out boxes</button><br><br>
+
+            <h3>This is fadeto() method </h3>
+            <button class="fadeto">Click to fade boxes</button><br><br>
+        </div>
+
+
+    </div>
+
+    <div class="animate">
+        <div class="btns">
+      <h3>This is animate() methods </h3><br>
+            <p>Move box to the right</p>
+            <button class="anm1">animation1</button><br><br>
+            <p>Move,zoom,fadeout color 50%</p>
+            <button class="anm2">animation2</button><br><br>
+            <p>Increase Size on each click</p>
+            <button class="anm3">animation3</button><br><br>
+            <p>Change color of Everything</p>
+            <button class="anm4">animation4</button><br><br>
+            <p>Destroy This Page (Refresh page after pressing this button)</p>
+            <button class="anm5">animation5</button><br><br>
+
+        </div>
+        <div class="box">
+            <div class="div2"
+                style="background-color:green;height:100px;border: 1px solid black;width:100px;position:absolute;">
+            </div>
+        </div>
+    </div>
+
+    <div class="animate">
+        <div class="box">
+            <div class="box2"></div>
+        </div>
+        <div class="btns">
+      <h3>This is animate(all Properties) method </h3>
+            <button class="anm-all">animation1</button><br><br>
+      <h3>This is animate(property),animate(property) method </h3>
+        
+            <button class="anm-one">animation2</button><br><br>
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="jquery-3.6.3.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    $(document).ready(function () {
+      $(".clr").click(function () {
+        alert("Background color = " + $("p").css("background-color"));
+      });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      // Hide displayed paragraphs
+      $(".hide-btn").click(function () {
+        $(".para").hide();
+      });
+
+      // Show hidden paragraphs
+      $(".show-btn").click(function () {
+        $(".para").show();
+      });
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      // Slide up displayed paragraphs
+      $(".up-btn").click(function () {
+        $(".para1").slideUp();
+      });
+
+      // Slide down hidden paragraphs
+      $(".down-btn").click(function () {
+        $(".para1").slideDown();
+      });
+    });
+  </script>
+
+
+</head>
+
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="fade-animate.html">Fade-animate</a>
+    <a href="css.html" style="text-decoration: underline;
+    font-weight: 600;color: rgb(71, 161, 251);">CSS</a>
+    <a href="manipulation.html">Manipulation</a>
+    <a href="insert.html">Insert</a>
+
+  </nav>
+
+  <div class="property">
+    <div class="box">
+      <p style="background-color:#ff0000;font-size: 20px;color: antiquewhite;text-align: center;font-size: 30px">The sky
+      </p>
+
+    </div>
+    <div class="btns">
+      <h3>This is css() method </h3>
+      <button class="clr">what color is the sky,ay mi amor!!</button><br><br>
+    </div>
+  </div>
+
+
+
+  <div class="hide-show">
+    <div class="box">
+      <p class="para" style="background-color:#00ff00;height: 95px;text-align: center;font-size: 30px;color: black;">
+        <br>I can play hide and seek.</p>
+
+    </div>
+    <div class="btns">
+      <h3>This is show() and hide() method </h3>
+      <button class="show-btn">show</button><br><br>
+      <button class="hide-btn">hide</button>
+    </div>
+  </div>
+
+  <div class="up-down">
+
+    <div class="box">
+      <p class="para1"
+        style="background-color:#0000ff;height: 130px;text-align: center;font-size: 30px;color: antiquewhite;"><br>I can
+        slide up and down.</p>
+    </div>
+
+    <div class="btns">
+      <h3>This is slideUp() and slideDown() method </h3>
+
+      <button type="button" class="up-btn">Slide Up Paragraphs</button><br><br>
+      <button type="button" class="down-btn">Slide Down Paragraphs</button>
+    </div>
+
+  </div>
+
+
+
+
+
+
+</body>
+
+</html>
